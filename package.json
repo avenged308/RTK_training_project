@@ -15,8 +15,8 @@
     "start": "vite",
     "test": "vitest --run",
     "type-check": "tsc -b --noEmit",
-    "deploy": "gh-pages -d dist",
-    "predeploy": "npm run build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.11.2",
