@@ -3,7 +3,7 @@ import { useAppSelector } from "../../app/hooks"
 import { AppDispatch, RootState } from "../../app/store"
 import { fetchApod } from "./apodSlice"
 import styles from "./ApodRandomImg.module.css"
-import ImageModalWindow from "./imageModalWindow"
+import ImageModalWindow from "./ImageModalWindow"
 import { useDispatch } from "react-redux"
 
 export const ApodRandomImg = () => {
@@ -63,9 +63,11 @@ export const ApodRandomImg = () => {
           )
         })}
       </div>
-      <footer className={styles.footer}>© {new Date().getFullYear()} Oleksii Shapovalov. All rights reserved.</footer>
+      <footer className={styles.footer}>
+        © {new Date().getFullYear()} Oleksii Shapovalov. All rights reserved.
+      </footer>
     </>
   )
 }
 
-export default ApodRandomImg;
+export default ApodRandomImg
