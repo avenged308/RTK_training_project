@@ -25,4 +25,5 @@
     "types": ["vitest/globals"]
   },
   "include": ["src"],
+  "exclude": ["eslint.config.js"]
 }
