@@ -3,6 +3,7 @@ import { useAppDispatch, useAppSelector } from "../../app/hooks"
 import { RootState } from "../../app/store"
 import styles from "./Products.module.css"
 import { fetchProducts, removeProduct } from "./productsSlice"
+import { addToCart } from "../cart/cartSlice"
 
 export const Products = () => {
   const dispatch = useAppDispatch()
@@ -41,7 +42,13 @@ export const Products = () => {
           />
 
           <h3 className={styles.title}>{product.title}</h3>
-
+          <p className={styles.price}>${product.price}</p>
+          <button
+            className={styles.addBtn}
+            onClick={() => dispatch(addToCart(product))}
+          >
+            Добавить в корзину
+          </button>
         </div>
       ))}
     </div>

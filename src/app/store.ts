@@ -8,10 +8,20 @@ import usersSlice from "../features/users/usersSlice"
 import weatherSlice from "../features/weather/weatherSlice"
 import productsSlice from "../features/products/productsSlice"
 import apodSlice from "../features/apod/apodSlice"
+import cartSlice from "../features/cart/cartSlice"
 
 // `combineSlices` automatically combines the reducers using
 // their `reducerPath`s, therefore we no longer need to call `combineReducers`.
-const rootReducer = combineSlices(counterSlice, quotesApiSlice, counter_newSlice, usersSlice, weatherSlice, productsSlice, apodSlice)
+const rootReducer = combineSlices(
+  counterSlice,
+  quotesApiSlice,
+  counter_newSlice,
+  usersSlice,
+  weatherSlice,
+  productsSlice,
+  apodSlice,
+  cartSlice,
+)
 // Infer the `RootState` type from the root reducer
 export type RootState = ReturnType<typeof rootReducer>
 
